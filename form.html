@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="forms.css" />
+
+</head>
+
+<body>
+    <div class="box">
+        <h1>Job Registration Form</h1>
+    <form action="connect.php" method="POST">
+        <div class="row">
+            <label class="required">First Name: </label> <br> 
+            <input type="text" name="firstname" pattern="[A-Za-z]{,10}" placeholder="Enter Firstname" autofocus="" required/>
+        </div>
+        <div class="row">
+            <label class="required"> Last Name:</label> <br>  
+            <input type="text" pattern="[A-Za-z]{,10}" name="lastname" placeholder="Enter Lastname" required/>
+        </div>
+        
+        <div class="colum">
+            <label class="required">Gender:</label> <br>
+            <input type="radio" name="gender" value="M" required /> Male
+            <input type="radio" name="gender" value="F" required /> Female
+            <input type="radio" name="gender" value="O" required /> Other
+        </div>
+        <div class="row">
+            <label class="required">Your date of birth:</label> <br> 
+            <input type="date" name="datebirth" required />
+        </div>
+        <div class="colum">
+            <label class="required">Technologies:</label> <br>
+            <input type="checkbox" name="tech" value="html" required /> HTML
+            <input type="checkbox" name="tech" value="css" required /> CSS
+            <input type="checkbox" name="tech" value="js" required /> JAVA SCRIPT
+        </div>
+      
+        <div class="colum">
+            <label class="required">Upload Your Resume:</label><br>
+            <input type="file" name="resume" required />
+        </div>
+        <div class="colum">
+            <label class="required">Your Email ID:</label> 
+            <input type="text" name="email" required placeholder="Enter Email Address"/>
+        </div>
+        
+        <div class="colum">
+            <label class="required">Your Mobile Number:</label> 
+            <input type="text" name="number" required placeholder="Enter Mobile Number"/>
+        </div>
+        <div class="row">
+            <label class="required">Password:</label> <br> 
+            <input type="text" pattern="[0-9A-Za-z*@]{8,}" placeholder="Password" required name="password"/>
+        </div>
+        <!-- <div class="row">
+            Your favourite color:
+            <input type="color" />
+        </div> -->
+        
+        <!-- <div class="colum">
+            Birth time:
+            <input type="time" />
+        </div>
+        <div class="colum">
+            Job applied details:
+            <input type="datetime-local" />
+        </div> -->
+        <div class="colum">
+            <label class="required">Address in details:</label><br>
+                <textarea class="abc" name="address" required>
+
+                </textarea>
+        </div>
+        <div id="live">
+            <label class="required">City lived in:</label><br>
+            <input list="cities" name="city" required/>
+            <datalist id="cities">
+                <option>Dehradun</option>
+                <option>Delhi</option>
+                <option>Kanpur</option>
+                <option>Lucknow</option>
+                <option>Shimla</option>
+                <option>Bhopal</option>
+                <option>Chandigarh</option>
+            </datalist>
+        </div>
+        <div class="tel">
+            <input type="button" value="Click me" />
+            <input type="submit" value="Submit form" />
+            <input type="reset" />
+        </div>   
+
+    </form>
+    </div>
+
+</body>
+
+</html>
